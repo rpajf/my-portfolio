@@ -1,15 +1,15 @@
-
+import { ThemeProvider } from './context/ThemeProvider';
 
 function App() {
 
 
-  return (
-    <>
-      <div>
+	return (
+		<ThemeProvider>
+			<div>
         asdasd
-      </div>
-    </>
-  )
+			</div>
+		</ThemeProvider>
+	);
 }
 
-export default App
+export default App;

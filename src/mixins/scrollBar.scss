@@ -1,0 +1,16 @@
+@mixin custom-scrollbar ($scrollbar-width, $scrollbar-thumb-color, $scrollbar-thumb-color-hover, $scrollbar-thumb-radius) {
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    border-radius: $scrollbar-thumb-radius;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb-color-hover;
+    }
+  }
+}

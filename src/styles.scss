@@ -1,21 +1,37 @@
+@import './mixins/font.scss';
+
+// @include
+:root.light-theme {
+  --body-color: black;
+  --body-background: #E5EAF5;
+  // Add more color variables as needed
+}
+
+/* Define your dark theme colors */
+:root.dark-theme {
+  --body-color: #94a1b2;
+  --body-background: #1E1E1E;
+  // Add more color variables as needed
+}
 
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
+  color: var(--body-color);
+  background-color: var(--body-background);
   padding: 0;
-  font-family: 'Muller', 'Open Sans', sans-serif;
+  font-family: 'Muller', 'Montserrat', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-tap-highlight-color: transparent;
-  font-size: $font-size;
+  font-size: 16px;
   box-sizing: border-box;
-  letter-spacing: $letter-spacing;
+  letter-spacing: 0.45px;
   line-height: 1.15;
   position: relative;
   overflow: hidden;
 
-  @include custom-cursor(default);
 
   main {
     height: 100%;
