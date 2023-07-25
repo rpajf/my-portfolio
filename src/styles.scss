@@ -1,17 +1,15 @@
-@import './mixins/font.scss';
 
-// @include
-:root.light-theme {
+
+:root.light {
   --body-color: black;
   --body-background: #E5EAF5;
-  // Add more color variables as needed
+
 }
 
-/* Define your dark theme colors */
-:root.dark-theme {
+:root.dark {
   --body-color: #94a1b2;
   --body-background: #1E1E1E;
-  // Add more color variables as needed
+
 }
 
 html,

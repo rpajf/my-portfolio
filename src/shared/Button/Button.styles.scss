@@ -1,4 +1,11 @@
 
+@import '../../../mixins/font.scss';
+
+
+.text {
+ @include text;
+}
+
 
 .button{
   width: 130px;

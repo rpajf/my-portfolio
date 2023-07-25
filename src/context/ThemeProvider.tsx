@@ -1,30 +1,35 @@
 import React from 'react';
 
 type Theme = 'light' | 'dark';
-type ThemeContextProps = {
-  theme: Theme;
-  toggleTheme: React.Dispatch<React.SetStateAction<Theme>>;
-};
-interface ThemeProviderProps {
-  children: React.ReactNode;
-}
 
-export const ThemeContext = React.createContext<ThemeContextProps | undefined>(
-	undefined
-);
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-	const [theme, setTheme] = React.useState<Theme>('light');
 
-	React.useEffect(() => {
-		document.documentElement.className = `${theme}-theme`;
-	}, [theme]);
-  
+function useThemeProviderValue(){
+	const [theme, setTheme] = React.useState<Theme>('dark');
 	const toggleTheme = () => {
 		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
 	};
+	return {theme, toggleTheme};
+}
+type Context = ReturnType<typeof useThemeProviderValue>
+const Context = React.createContext<Context | undefined>(undefined);
+const ThemeProvider = (props: React.PropsWithChildren) => {
+
+	const {theme, toggleTheme} = useThemeProviderValue();
+
+	React.useLayoutEffect(() => {
+		document.documentElement.className = theme;
+	}, [theme]);
+
 	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>
-			{children}
-		</ThemeContext.Provider>
+		<Context.Provider value={{theme, toggleTheme}}{...props}/>
 	);
 };
+
+export {ThemeProvider};
+export function useTheme() {
+	const context = React.useContext(Context);
+	if (context === undefined) {
+		throw new Error('useContext must be used within a Provider');
+	}
+	return context;
+}
