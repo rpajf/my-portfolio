@@ -1,11 +1,7 @@
 
 
 .content {
-  // display: flex;
-  // flex-direction: column;
-  position: absolute;
-  top: 150px;
-  left: 200px;
+  // margin: 0 auto;
   max-width: 350px;
 }
 
@@ -13,12 +9,18 @@
   font-family: 'Noto Serif';
   font-size: 48px;
   font-weight: 500;
-  color: var(--light-text-color);
+  // color: var(--light-text-color);
+  color: var(--lavender-white-color);
   letter-spacing: 1.5px;
 }
-.subTitle{
+.subTitle {
   font-family: 'Karla';
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 2px;
+}
+.btns-wrapper {
+  width: 550px;
+  display: flex;
+  align-items: center;
 }

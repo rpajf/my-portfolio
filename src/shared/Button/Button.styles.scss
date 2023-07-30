@@ -1,5 +1,5 @@
 
-@import '../../../mixins/font.scss';
+@import '../../mixins/font.scss';
 
 
 .text {
@@ -7,9 +7,14 @@
 }
 
 
-.button{
+.button {
   width: 130px;
   height: 40px;
   border-radius: 8px;
-  background-color: #845BB3;
+  
+
+  &:hover {
+    background-color: pink;
+    color: green($color: #000000);
+  }
 }

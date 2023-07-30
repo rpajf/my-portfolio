@@ -5,17 +5,15 @@
 .home {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  height: 100vh;
 
 }
 
 .home-section {
- @include flex(flex-end);
- width: 100%;
-//  width: 400px;
-//  height: 400px;
+
+  @include flex(center, space-between);
+  width: 100%;
+
 }
 
 .photo {
@@ -29,7 +27,6 @@
   width: 400px;
   height: 400px;
 
-  position: relative;
   background: rgba(87, 67, 167, 0.5) no-repeat;
   // background-size: cover;
   // background-position: center;

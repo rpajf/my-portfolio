@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.styles.scss';
-import Sidebar from '../../components/Sidebar/Sidebar';
+// import Sidebar from '../../components/Sidebar/Sidebar';
 import MainContent from '../../shared/MainContent/MainContent';
+import Header from '../../components/Header/Header';
 // interface HomeProps{
 //   children: React.ReactNode[]
 // }
@@ -9,13 +10,14 @@ import MainContent from '../../shared/MainContent/MainContent';
 const Home: React.FC = () => {
 	return (
 		<main className='home'>
-			<Sidebar/>
+			<Header/>
+			{/* <Sidebar/> */}
 			<section className='home-section'>
-				<MainContent title='Hi iam Raphael, welcome to my portfolio' subTitle='Software engineer | fullstack developer'/>
+				<MainContent title='Welcome to my portfolio, Iam Raphael' subTitle='Software engineer | fullstack developer'/>
 				<div className='photo'/>
-				{/* <img className='photo2' src="../../assets/travel.svg" alt="" /> */}
 			</section>
-		</main>) ;
+		</main>
+	);
 };
 
 export default Home;
