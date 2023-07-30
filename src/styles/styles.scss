@@ -1,4 +1,4 @@
-
+@import './theme.scss';
 
 :root.light {
   --body-color: black;
@@ -8,14 +8,15 @@
 
 :root.dark {
   --body-color: #94a1b2;
-  --body-background: #1E1E1E;
-
+  // --body-background: #1E1E1E;
+  --body-background: #D0BDF4;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  max-width: 1600px;
   margin: 0;
   color: var(--body-color);
   background-color: var(--body-background);
@@ -41,6 +42,9 @@ body {
   *:after {
     box-sizing: inherit;
   }
+}
+*:focus-visible {
+  outline: none;
 }
 
 

@@ -1,0 +1,33 @@
+@import '../consts/theme/colors.scss';
+
+:root {
+  --hover-blue-color: #{inspect($hover-blue)};
+  --purple-indigo-color: #{inspect($lavender-indigo)};
+  --yellow-default-color: #{inspect($default-yellow)};
+  --purple-indigo-color: #{inspect($lavender-indigo)};
+  --purple-indigo-color: #{inspect($lavender-indigo)};
+  --light-text-color:  #{inspect($label_bg_color)};
+}
+// $denim-blue: #273caa;
+// $deep-blue: #2f3660;
+// $faux-indigo: #242d5d;
+// $dark-panel-background: #2a2c33;
+// $lavender: #dce1fe;
+// $light-lavender: #e9edfe;
+// $dark-lavender: #eaeaeb;
+// $lavender-blush: #fef9fa;
+// $lavender-blue: #c2ccfe;
+// $lavender-indigo: #854cef;
+// $blue-medium: #283cae;
+// $hover-blue: #2e46c8;
+// $arena-light-gray: #f0f1f4;
+// $label_bg_color: #e7e7ec;
+// $blue-dark: #0a1749;
+// $gray-light-blue: #dce1fe;
+// $gray-light-blueish: #b9bece;
+// $gray-light-blueish-2: #c3c5cf;
+// $gray-lighten2: #e1e2eb;
+// $gray-lighten3: #ebecf2;
+// $gray-dark: #707070;
+// $gray-dark-blue: #5a699d;
+// $default-yellow: #ffd356;

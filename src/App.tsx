@@ -1,6 +1,6 @@
 
-import Sidebar from './components/Sidebar';
-import MainContent from './shared/MainContent/MainContent';
+// import Sidebar from './components/Sidebar';
+// import MainContent from './shared/MainContent/MainContent';
 
 import Home from './pages/Home';
 function App() {
@@ -9,10 +9,11 @@ function App() {
 	// console.log('theme',theme);
 	return (
 
-		<Home>
-			<Sidebar/>
-			<MainContent title='Hi iam Raphael, welcome to my portfolio' subTitle='Software engineer | fullstack developer'/>
-		</Home>
+	// <main>
+	// 	{/* <Sidebar/> */}
+	// </main>
+
+		<Home/>
 
 	);
 }

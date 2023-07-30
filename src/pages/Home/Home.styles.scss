@@ -1,4 +1,4 @@
-
+@import '../../mixins/flex.scss';
 
 
 
@@ -9,4 +9,30 @@
   justify-content: center;
   position: relative;
 
+}
+
+.home-section {
+ @include flex(flex-end);
+ width: 100%;
+//  width: 400px;
+//  height: 400px;
+}
+
+.photo {
+  background-image: url(../../assets/travel-2.svg);
+  width: 405px;
+  height: 405px;
+
+}
+.photo2 {
+
+  width: 400px;
+  height: 400px;
+
+  position: relative;
+  background: rgba(87, 67, 167, 0.5) no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  // background-blend-mode: multiply;
+  
 }
