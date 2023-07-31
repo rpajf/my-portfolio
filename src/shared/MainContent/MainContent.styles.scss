@@ -1,4 +1,4 @@
-
+@import '../../mixins/flex.scss';
 
 .content {
   max-width: 350px;
@@ -19,9 +19,39 @@
   white-space: nowrap;
 
 }
+.tooltip-overlay {
+  @include flex;
+  width: 240px;
+  background: none;
+  // a {
+  //   border: 1px solid red;
+  // }
+}
+.link {
+  background-color: transparent;
+}
+.tooltip-element {
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  @include flex;
+  width: 140px;
+  height: 40px;
+  &:hover {
+    border: 1px solid #845BB3;
+
+  }
+}
 .btns-wrapper {
-  // width: 550px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.rc-tooltip-inner.rc-tooltip-inner {
+  background: transparent;
+
+  &:hover{
+    border: 1px solid #845BB3;
+  }
+}
+

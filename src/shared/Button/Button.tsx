@@ -7,14 +7,14 @@ interface ButtonProps {
   isLoading?: boolean;
   children: React.ReactNode | string
 	hasBorder?: boolean
-
 }
 
 
 const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder }) => {
 	const [isActive, setIsActive] = React.useState();
+
 	return (
-		<button className={classNames('button', {'has-border': hasBorder, 'is-active': isActive} )} onClick={onClick}>
+		<button className={classNames('button', {'has-border': hasBorder} )} onClick={onClick}>
 			{children}
 		</button>);
 };
