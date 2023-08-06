@@ -21,7 +21,8 @@
 }
 .tooltip-overlay {
   @include flex;
-  width: 240px;
+  padding: 0;
+  // width: 240px;
   background: none;
   // a {
   //   border: 1px solid red;
@@ -37,6 +38,7 @@
   @include flex;
   width: 140px;
   height: 40px;
+  
   &:hover {
     border: 1px solid #845BB3;
 
@@ -49,9 +51,30 @@
 }
 .rc-tooltip-inner.rc-tooltip-inner {
   background: transparent;
-
+  padding: 0;
   &:hover{
-    border: 1px solid #845BB3;
+    color: var(--white-text);
   }
 }
 
+
+// .rc-tooltip-arrow.rc {
+//   border-style: solid;
+//   border-width: 0 7.5px 13.0px 7.5px;
+//   border-color: transparent transparent #FF4532 transparent;
+//   transform: rotate(0deg);
+
+//   // &:before {
+//   //   content: "";
+//   //   width: 0;
+//   //   height: 0;
+    
+//   //   position: absolute;
+//   //   border-bottom: solid 48px transparent;
+//   //   border-top: solid 48px white;
+//   //   border-left: solid 48px transparent;
+//   //   border-right: solid 48px transparent;
+//   //   top: -49px;
+//   //   left: -48px;
+//   // }
+// }

@@ -10,11 +10,16 @@ interface ButtonProps {
 }
 
 
-const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder }) => {
-	const [isActive, setIsActive] = React.useState();
+const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder=false }) => {
+	const [isActive, setIsActive] = React.useState<boolean>(false);
+
+	const handleClick = React.useCallback((e:React.MouseEvent) => {
+		onClick!(e);
+		setIsActive(!isActive);
+	},[isActive]);
 
 	return (
-		<button className={classNames('button', {'has-border': hasBorder} )} onClick={onClick}>
+		<button className={classNames('button', {'has-border': hasBorder, 'is-active': isActive} )} onClick={handleClick}>
 			{children}
 		</button>);
 };

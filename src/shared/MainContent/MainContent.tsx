@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainContent.styles.scss';
 import 'rc-tooltip/assets/bootstrap.css';
-import {noop} from 'lodash';
+// import {noop} from 'lodash';
 import Tooltip from 'rc-tooltip';
 import Button from '../Button';
 import CV_URL_ENG from '../../assets/cv/RAPHAEL-CV-ENG.pdf';
@@ -9,7 +9,6 @@ interface MainContent{
   title:string
 	subTitle: string
 }
-
 
 
 
