@@ -7,10 +7,11 @@ interface ButtonProps {
   isLoading?: boolean;
   children: React.ReactNode | string
 	hasBorder?: boolean
+	hasBorderBottom?: boolean
 }
 
 
-const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder=false }) => {
+const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder=false, hasBorderBottom=false }) => {
 	const [isActive, setIsActive] = React.useState<boolean>(false);
 
 	const handleClick = React.useCallback((e:React.MouseEvent) => {
@@ -19,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({onClick, children, hasBorder=false }) =>
 	},[isActive]);
 
 	return (
-		<button className={classNames('button', {'has-border': hasBorder, 'is-active': isActive} )} onClick={handleClick}>
+		<button className={classNames('button', {'has-border': hasBorder, 'is-active': isActive, 'has-border-bottom':hasBorderBottom} )} onClick={handleClick}>
 			{children}
 		</button>);
 };

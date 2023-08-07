@@ -2,10 +2,22 @@
 
 .container {
   height: 120px;
-  margin: 30px;
+  padding-top: 30px;
   // display: flex;
   // width: 100%;
   @include flex(center, space-around);
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000;
 
+  &.is-scrolling {
+    background: radial-gradient(circle, rgba(27, 25, 50, 0.5), rgba(27, 9, 31, 0.5))
+  }
+
+  &.border-bottom-active {
+    border-bottom: 2px solid yellow;
+  }
 
 }

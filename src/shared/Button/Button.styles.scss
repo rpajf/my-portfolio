@@ -10,16 +10,17 @@
   width: 140px;
   height: 40px;
   border-radius: 4px;
-  
-  &.has-border {
-    border: 1px solid #845BB3;
-  }
-
-  &.is-active{
-    border-bottom: 1px solid yellow;
-  }
-
-  // &:hover {
-  //   border: 1px solid #845BB3;
+  margin-right: 6px;
+  color: #fff;
+  // &.has-border {
+  //   border: 2px solid var(--yellow-default-color);
   // }
+  transition: border-bottom 0.2s ease;
+  &.is-active{
+    border-bottom: 2px solid yellow;
+  }
+
+  &.has-border-bottom:hover {
+    border-bottom: 2px solid yellow;
+  }
 }

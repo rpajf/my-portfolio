@@ -5,6 +5,7 @@ import 'rc-tooltip/assets/bootstrap.css';
 import Tooltip from 'rc-tooltip';
 import Button from '../Button';
 import CV_URL_ENG from '../../assets/cv/RAPHAEL-CV-ENG.pdf';
+
 interface MainContent{
   title:string
 	subTitle: string
@@ -22,7 +23,7 @@ const MainContent: React.FC<MainContent> = ({title, subTitle}) => {
 				rel="noreferrer"
 				className='link'
 			>
-				<Button>English version</Button>
+				<Button hasBorderBottom >English version</Button>
 			</a>
 			<a
 				href={CV_URL_ENG}
@@ -31,7 +32,7 @@ const MainContent: React.FC<MainContent> = ({title, subTitle}) => {
 				rel="noreferrer"
 				className='link'
 			>
-				<Button>Portuguese version</Button>
+				<Button hasBorderBottom>Portuguese version</Button>
 			</a>
 		</div>
 	); 
@@ -40,7 +41,6 @@ const MainContent: React.FC<MainContent> = ({title, subTitle}) => {
 			<h2 className='title'>{title}</h2>
 			<h5 className='subTitle'>{subTitle}</h5>
 			<div className='btns-wrapper'>
-				<Button hasBorder>Projects</Button>
 				<Tooltip   mouseEnterDelay={0.1} // Delay in seconds for tooltip to show after hover
 					mouseLeaveDelay={0.25}  trigger="hover" placement='bottom'  destroyTooltipOnHide overlay={overlay}> 
 					<div className='tooltip-element'>Download CV</div>
