@@ -29,9 +29,9 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={classNames('button', {
-				"has-border": hasBorder,
-				"is-active": isActive,
-				"has-border-bottom": hasBorderBottom,
+				'has-border': hasBorder,
+				'is-active': isActive,
+				'has-border-bottom': hasBorderBottom,
 			})}
 			onClick={handleClick}
 		>

@@ -14,7 +14,6 @@
 html {
 	min-height: 100%;
 	width: 100%;
-	max-width: 1600px;
 	overflow-x: hidden;
 }
 body {
@@ -22,7 +21,7 @@ body {
 	margin: 0;
 	padding: 0;
 	color: var(--body-color);
-	font-family: 'Muller', 'Montserrat', sans-serif;
+	font-family: 'Proxima nova', 'Montserrat', sans-serif;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
@@ -56,6 +55,10 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+h2 {
+	font-size: 30px;
 }
 
 *,

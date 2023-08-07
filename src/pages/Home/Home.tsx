@@ -2,8 +2,8 @@ import React from 'react';
 import './Home.styles.scss';
 
 import MainContent from '../../shared/MainContent/MainContent';
-import Header from '../../components/Header/Header';
-import Section from '../../shared/Section/Section';
+import Header from '../../components/Header';
+import Section from '../../shared/Section';
 
 const Home: React.FC = () => {
 	return (
