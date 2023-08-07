@@ -2,12 +2,17 @@
 .container {
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .about {
   max-width: 600px;
   display: flex;
   flex-direction: column;
+}
+.project-title {
+  font-size: 22px;
 }
 .project-section {
 
@@ -16,6 +21,13 @@
 
 }
 
-.tecnologies {
+.tecnologies-wrapper {
+  display: flex;
+  align-items: center;
 
+}
+.icon {
+  margin-right: 4px;
+  height: 24px;
+  width: 24px;
 }

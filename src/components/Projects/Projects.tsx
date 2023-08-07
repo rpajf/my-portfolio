@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.style.scss';
 import Button from '../../shared/Button/Button';
-interface ProjectsProps{
+interface ProjectWrapperProps{
 
   title: string
   description: string
@@ -10,18 +10,23 @@ interface ProjectsProps{
   tecnologies: string[]
 }
 
-const Projects: React.FC<ProjectsProps> = ({title, description, link, tecnologies, imageUrl}) => {
+const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link, tecnologies, imageUrl}) => {
+	const navigateToUrl = React.useCallback(() => location.href= link, []);
 	return (
-		<div className='content'>
+		<div className='container'>
 			<div className='about'>
-				<h2>{title}</h2>
+				<h2 className='project-title'>{title}</h2>
 				<p>{description}</p>
 			</div>
 
-			<div>{}</div>
-			<Button>View on github</Button>
+			<div className='tecnologies-wrapper'>
+				{tecnologies.map((imageUrl) => (
+					<img className='icon' key={1} src={`${imageUrl}`}/>
+				))}
+			</div>
+			<Button onClick={navigateToUrl}>View on github</Button>
 		</div>
 	);
 };
 
-export default Projects;
+export default ProjectWrapper;

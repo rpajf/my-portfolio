@@ -28,7 +28,7 @@ const Header: React.FC = () => {
 	}, [window.scrollY]);
 
 	return (
-		<div className={classNames('container', { 'is-scrolling': isScrolled })}>
+		<div className={classNames('header-container', { 'is-scrolling': isScrolled })}>
 			<Button
 				onClick={() => handleButtonClick('About')}
 				hasBorderBottom
