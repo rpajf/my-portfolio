@@ -1,82 +1,76 @@
 @import './theme.scss';
 
 :root.light {
-  --body-color: black;
-  --body-background: #E5EAF5;
-
+	--body-color: black;
+	--body-background: #e5eaf5;
 }
 
 :root.dark {
-  --body-color: #94a1b2;
-  --body-background: #29293C
-;
-  // --body-background: #D0BDF4;
+	--body-color: #94a1b2;
+	--body-background: #29293c;
+	// --body-background: #D0BDF4;
 }
 
 html {
-  min-height: 100%;
-  width: 100%;
-  max-width: 1600px;
-  overflow-x: hidden;
+	min-height: 100%;
+	width: 100%;
+	max-width: 1600px;
+	overflow-x: hidden;
 }
 body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  color: var(--body-color);
-  font-family: 'Muller', 'Montserrat', sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box;
-  position: relative; 
-  
-  
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	color: var(--body-color);
+	font-family: 'Muller', 'Montserrat', sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	position: relative;
 }
 body::before {
-  content: '';
-  position: fixed; // Change to fixed positioning
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  // background-image: linear-gradient(rgba(87, 67, 167, 0.6), rgba(87, 67, 167, 0.5)), url('../assets/sky.svg');
-  // background-image: linear-gradient(rgba(122, 119, 133, 0.1), rgba(47, 46, 52, 0.5)), url('../assets/bg.svg');
-  background-image: url('../assets/bg.svg');
+	content: '';
+	position: fixed; // Change to fixed positioning
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// background-image: linear-gradient(rgba(87, 67, 167, 0.6), rgba(87, 67, 167, 0.5)), url('../assets/sky.svg');
+	// background-image: linear-gradient(rgba(122, 119, 133, 0.1), rgba(47, 46, 52, 0.5)), url('../assets/bg.svg');
+	background-image: url('../assets/bg.svg');
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  // background: rgba(87, 67, 167, 0.8) no-repeat;\
-  // background: black;
-  // opacity: 0.75;
-  z-index: -1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	// background: rgba(87, 67, 167, 0.8) no-repeat;\
+	// background: black;
+	// opacity: 0.75;
+	z-index: -1;
 }
-   
 
-  button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
 *:focus-visible {
-  outline: none;
+	outline: none;
 }
-
 
 a,
 a:focus,
 a:hover {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }

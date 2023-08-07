@@ -1,62 +1,63 @@
 @import '../../mixins/flex.scss';
 
 .content {
-  max-width: 350px;
+	max-width: 350px;
 }
 
 .title {
-  font-family: 'Noto Serif';
-  font-size: 48px;
-  font-weight: 500;
-  color: var(--lavender-white-color);
-  letter-spacing: 1.2px;
+	font-family: 'Noto Serif';
+	font-size: 48px;
+	font-weight: 500;
+	color: var(--lavender-white-color);
+	letter-spacing: 1.2px;
 }
 .subTitle {
-  font-family: 'Karla';
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  white-space: nowrap;
+	font-family: 'Karla';
+	font-size: 26px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	white-space: nowrap;
+}
 
-}
 .tooltip-overlay {
-  @include flex;
-  padding: 0;
-  // width: 240px;
-  background: none;
-  // a {
-  //   border: 1px solid red;
-  // }
+	@include flex;
+	padding: 0;
+	background: none;
 }
+
 .link {
-  background-color: transparent;
+	background-color: transparent;
 }
 .tooltip-element {
-  cursor: pointer;
-  border-radius: 4px;
-  display: flex;
-  @include flex;
-  width: 140px;
-  height: 40px;
-  
-  &:hover {
-    border: 1px solid #845BB3;
+	cursor: pointer;
+	border-radius: 4px;
+	display: flex;
+	@include flex;
+	padding: 0 12px;
+	height: 40px;
+	color: var(--white-text);
+	background-color: var(--pink-color);
+	opacity: 0.8;
+	transition: opacity 0.2 ease;
 
-  }
+	&:hover {
+		opacity: 1;
+	}
 }
+
 .btns-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.rc-tooltip-inner.rc-tooltip-inner {
-  background: transparent;
-  padding: 0;
-  &:hover{
-    color: var(--white-text);
-  }
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
+.rc-tooltip-inner.rc-tooltip-inner {
+	background: transparent;
+	padding: 0;
+	&:hover {
+		color: var(--white-text);
+	}
+}
 
 // .rc-tooltip-arrow.rc {
 //   border-style: solid;
@@ -68,7 +69,7 @@
 //   //   content: "";
 //   //   width: 0;
 //   //   height: 0;
-    
+
 //   //   position: absolute;
 //   //   border-bottom: solid 48px transparent;
 //   //   border-top: solid 48px white;

@@ -1,26 +1,38 @@
-
 @import '../../mixins/font.scss';
 
-
 .text {
- @include text;
+	@include text;
 }
 
 .button {
-  width: 140px;
-  height: 40px;
-  border-radius: 4px;
-  margin-right: 6px;
-  color: #fff;
-  // &.has-border {
-  //   border: 2px solid var(--yellow-default-color);
-  // }
-  transition: border-bottom 0.2s ease;
-  &.is-active{
-    border-bottom: 2px solid yellow;
-  }
+	width: 140px;
+	height: 40px;
+	border-radius: 4px;
+	margin-right: 6px;
+	color: #fff;
+	// &.has-border {
+	//   border: 2px solid var(--yellow-default-color);
+	// }
+	transition: border-bottom 0.2s ease;
+	&.is-active {
+		border-bottom: 2px solid yellow;
+		// border-bottom: 2px solid var(--purple-indigo-color);
+	}
+	&.has-background {
+		background-color: var(--pink-color);
+	}
+	&::before {
+		content: '';
+		height: 2px;
+		background: var(--purple-indigo-color);
+		width: 140px;
+		display: none;
+	}
 
-  &.has-border-bottom:hover {
-    border-bottom: 2px solid yellow;
-  }
+	&.has-border-bottom:hover {
+		// border-bottom: 2px solid var(--purple-indigo-color);
+		&::before {
+			display: block;
+		}
+	}
 }

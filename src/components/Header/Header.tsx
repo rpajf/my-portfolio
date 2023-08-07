@@ -25,14 +25,31 @@ const Header: React.FC = () => {
 		} else {
 			setIsScrolled(false);
 		}
-	},[window.scrollY]);
-	
+	}, [window.scrollY]);
 
 	return (
-		<div className={classNames('container', {'is-scrolling': isScrolled})}>
-			<Button onClick={() => handleButtonClick('About')} hasBorderBottom hasBorder={activeButton === 'About'}>About</Button>
-			<Button onClick={() => handleButtonClick('Projects')} hasBorderBottom hasBorder={activeButton === 'Projects'}>Projects</Button>
-			<Button onClick={() => handleButtonClick('Skills')} hasBorderBottom hasBorder={activeButton === 'Skills'}>Skills</Button>
+		<div className={classNames('container', { 'is-scrolling': isScrolled })}>
+			<Button
+				onClick={() => handleButtonClick('About')}
+				hasBorderBottom
+				hasBorder={activeButton === 'About'}
+			>
+        About
+			</Button>
+			<Button
+				onClick={() => handleButtonClick('Projects')}
+				hasBorderBottom
+				hasBorder={activeButton === 'Projects'}
+			>
+        Projects
+			</Button>
+			<Button
+				onClick={() => handleButtonClick('Skills')}
+				hasBorderBottom
+				hasBorder={activeButton === 'Skills'}
+			>
+        Skills
+			</Button>
 		</div>
 	);
 };

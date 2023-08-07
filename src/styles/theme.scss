@@ -1,15 +1,17 @@
 @import '../consts/theme/colors.scss';
 
 :root {
-  --hover-blue-color: #{inspect($hover-blue)};
-  --purple-indigo-color: #{inspect($lavender-indigo)};
-  --yellow-default-color: #{inspect($default-yellow)};
-  --purple-indigo-color: #{inspect($lavender-indigo)};
-  --purple-dark-color: #{inspect($purple-dark)};
-
-  --light-text-color:  #{inspect($label_bg_color)};
-  --lavender-white-color: #{inspect($lavender-blush)};
-  --white-text: #fff4f1;
+	--hover-blue-color: #{inspect($hover-blue)};
+	--purple-indigo-color: #{inspect($lavender-indigo)};
+	--yellow-default-color: #{inspect($default-yellow)};
+	--sticker-purple-color: #{inspect($sticker-purple)};
+	--sticker-dark-purple-color: #{inspect($sticker-dark-purple)};
+	--pink-color: #{inspect($pink)};
+	--purple-dark-color: #{inspect($purple-dark)};
+	--main-white-colors: #{inspect($main-white)};
+	--light-text-color: #{inspect($label_bg_color)};
+	--lavender-white-color: #{inspect($lavender-blush)};
+	--white-text: #fff4f1;
 }
 // $denim-blue: #273caa;
 // $deep-blue: #2f3660;
