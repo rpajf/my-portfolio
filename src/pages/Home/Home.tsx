@@ -35,6 +35,7 @@ const Home: React.FC = () => {
 			</Section>
 			<Section title="Projects">
 				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"/>
+				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"/>
 			</Section>
 		</main>
 	);
