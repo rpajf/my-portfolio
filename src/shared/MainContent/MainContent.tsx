@@ -8,10 +8,11 @@ import CV_URL_ENG from '../../assets/cv/RAPHAEL-CV-ENG.pdf';
 
 interface MainContent {
   title: string;
+	headline?: string
   subTitle: string;
 }
 
-const MainContent: React.FC<MainContent> = ({ title, subTitle }) => {
+const MainContent: React.FC<MainContent> = ({ title, subTitle, headline }) => {
 	const overlay = (
 		<div className="tooltip-overlay">
 			<a
@@ -36,11 +37,14 @@ const MainContent: React.FC<MainContent> = ({ title, subTitle }) => {
 	);
 	return (
 		<div className="content">
-			<h2 className="title">{title}</h2>
-			<h5 className="subTitle">{subTitle}</h5>
+			<div className='text-wrapper'>
+				<h3 className="headline">{headline}</h3>
+				<h2 className="title">{title}</h2>
+				<h5 className="subTitle">{subTitle}</h5>
+			</div>
 			<div className="btns-wrapper">
 				<Tooltip
-					mouseEnterDelay={0.1} // Delay in seconds for tooltip to show after hover
+					mouseEnterDelay={0.1}
 					mouseLeaveDelay={0.25}
 					trigger="hover"
 					placement="bottom"

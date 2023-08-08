@@ -21,7 +21,8 @@ const Home: React.FC = () => {
 			<Header />
 			<section className="home-section">
 				<MainContent
-					title="Welcome to my portfolio, Iam Raphael"
+					headline="Hello, my name is Raphael"
+					title="welcome to my portfolio"
 					subTitle="Software engineer | fullstack developer"
 				/>
 				<div className="photo" />

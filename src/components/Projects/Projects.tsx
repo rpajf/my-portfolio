@@ -16,15 +16,22 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link
 		<div className='container'>
 			<div className='about'>
 				<h2 className='project-title'>{title}</h2>
-				<p>{description}</p>
-			</div>
+				<div className='project-section'>
+					<p className='description'>{description}</p>
 
-			<div className='tecnologies-wrapper'>
-				{tecnologies.map((imageUrl) => (
-					<img className='icon' key={1} src={`${imageUrl}`}/>
-				))}
+					<img src="" alt="" className='project-img'/>
+				</div>
 			</div>
-			<Button onClick={navigateToUrl}>View on github</Button>
+			<div className='footer'>
+				<div className='tecnologies-wrapper'>
+					{tecnologies.map((imageUrl) => (
+						<img className='icon' key={1} src={`${imageUrl}`}/>
+					))}
+				</div>
+				<Button hasBackground onClick={navigateToUrl}>View on github</Button>
+
+			</div>
+	
 		</div>
 	);
 };

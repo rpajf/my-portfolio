@@ -8,6 +8,7 @@ interface ButtonProps {
   children: React.ReactNode | string;
   hasBorder?: boolean;
   hasBorderBottom?: boolean;
+	hasBackground?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
 	children,
 	hasBorder = false,
 	hasBorderBottom = false,
+	hasBackground = false
 }) => {
 	const [isActive, setIsActive] = React.useState<boolean>(false);
 
@@ -32,6 +34,7 @@ const Button: React.FC<ButtonProps> = ({
 				'has-border': hasBorder,
 				'is-active': isActive,
 				'has-border-bottom': hasBorderBottom,
+				'has-background': hasBackground
 			})}
 			onClick={handleClick}
 		>

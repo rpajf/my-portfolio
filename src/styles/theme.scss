@@ -8,10 +8,11 @@
 	--sticker-dark-purple-color: #{inspect($sticker-dark-purple)};
 	--pink-color: #{inspect($pink)};
 	--purple-dark-color: #{inspect($purple-dark)};
-	--main-white-colors: #{inspect($main-white)};
+	--text-secondary-color: #{inspect($green-cyan)};
+	--main-white-color: #{inspect($main-white)};
 	--light-text-color: #{inspect($label_bg_color)};
 	--lavender-white-color: #{inspect($lavender-blush)};
-	--white-text: #fff4f1;
+	--white-warm-color: #{inspect($white-warm)};
 }
 // $denim-blue: #273caa;
 // $deep-blue: #2f3660;

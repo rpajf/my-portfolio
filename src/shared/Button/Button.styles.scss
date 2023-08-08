@@ -17,8 +17,6 @@
 	position: relative;
 	transition: border-bottom 0.2s ease;
 	&.is-active::before {
-		// border-bottom: 2px solid yellow;
-		// border-bottom: 2px solid var(--pink-color);
 		display: block;
 	}
 	&.has-background {
@@ -29,7 +27,6 @@
 		bottom: 0;
 		content: '';
 		height: 2px;
-		// background: var(--purple-indigo-color);
 		border-bottom: 2px solid var(--pink-color);
 		width: 140px;
 		display: none;

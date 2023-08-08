@@ -26,4 +26,12 @@
   width: 370px;
   height: 370px;
   background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--sticker-dark-purple-color); 
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    // box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    box-shadow: 0 5px 20px 1px var(--purple-indigo-color);
+  }
 }
+// color: var(--white-warm-color);
