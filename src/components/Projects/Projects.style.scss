@@ -4,10 +4,15 @@
   border-radius: 4px;
   margin: 20px 0 20px 0;
   @include flex(column, start);
-  background-color: rgba($color: #c8b17e, $alpha: 0.2);
+  // background-color: rgba($color: #c8b17e, $alpha: 0.2);
+  background-color: rgba($color: #dce1fe, $alpha: 0.1);
+
   padding: 8px;
 
 }
+$gray-light-blue: #dce1fe;
+$gray-light-blueish: #b9bece;
+$gray-light-blueish-2: #c3c5cf;
 
 .about {
   max-width: 600px;
@@ -34,7 +39,6 @@
   width: 320px;
   height: 280px;
   border-radius: 4px;
-  background-color: var(--light-text-color);
 }
 
 .footer {

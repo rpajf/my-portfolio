@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import { useOutsideClick } from '../../hooks/clickOutside';
 import './Button.styles.scss';
 
 interface ButtonProps {
-  onClick?: (e: React.MouseEvent) => void;
+  onClick: () => void;
   isLoading?: boolean;
   children: React.ReactNode | string;
   hasBorder?: boolean;
@@ -19,13 +20,18 @@ const Button: React.FC<ButtonProps> = ({
 	hasBackground = false
 }) => {
 	const [isActive, setIsActive] = React.useState<boolean>(false);
+	const handleOutsideClick = React.useCallback(() => {
+		if(isActive) setIsActive(false);
+	},[isActive]);
 
+	const buttonRef = useOutsideClick<HTMLButtonElement>(handleOutsideClick);
 	const handleClick = React.useCallback(
-		(e: React.MouseEvent) => {
-      onClick!(e);
-      setIsActive(!isActive);
+		() => {
+			onClick!();
+			console.log('clicked');
+			setIsActive(!isActive);
 		},
-		[isActive],
+		[isActive, onClick],
 	);
 
 	return (
@@ -36,6 +42,7 @@ const Button: React.FC<ButtonProps> = ({
 				'has-border-bottom': hasBorderBottom,
 				'has-background': hasBackground
 			})}
+			ref={buttonRef}
 			onClick={handleClick}
 		>
 			{children}

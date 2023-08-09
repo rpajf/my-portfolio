@@ -3,14 +3,32 @@ import Button from '../../shared/Button/Button';
 import classNames from 'classnames';
 import './Header.styles.scss';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+	scrollToElement: {
+		scrollIntoProjects: () => void;
+		scrollIntoAbout: () => void;
+	};
+}
+
+const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 	const [activeButton, setActiveButton] = React.useState<string | null>(null);
 	const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
 
-	const handleButtonClick = (buttonName: string) => {
-		setActiveButton(buttonName);
-		console.log('click');
-	};
+	const handleButtonClick = React.useCallback((buttonName: string) => {
+		if(buttonName=== 'About'){
+			console.log('test');
+			scrollToElement.scrollIntoAbout();
+			setActiveButton(buttonName);
+
+		}
+		if(buttonName=== 'Projects'){
+			console.log('test2');
+
+			scrollToElement.scrollIntoProjects();
+			setActiveButton(buttonName);
+
+		}
+	},[scrollToElement]);
 
 	React.useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -44,7 +62,7 @@ const Header: React.FC = () => {
         Projects
 			</Button>
 			<Button
-				onClick={() => handleButtonClick('Skills')}
+				onClick={() => {}}
 				hasBorderBottom
 				hasBorder={activeButton === 'Skills'}
 			>
