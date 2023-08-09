@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.styles.scss';
-import Button from '../../shared/Button/Button';
 import MainContent from '../../shared/MainContent/MainContent';
 import Header from '../../components/Header';
 import iconreact from '../../assets/techs/icons8-react.svg';
@@ -10,8 +9,6 @@ import { scrollIntoView } from '../../utils/scroll';
 import { nodeRouterDescription } from '../../consts/projectDescriptions';
 import Section from '../../shared/Section';
 import ProjectWrapper from '../../components/Projects';
-
-
 
 
 const Home: React.FC = () => {
@@ -43,10 +40,6 @@ const Home: React.FC = () => {
 				/>
 				<div className="photo" />
 			</section>
-			{/* <Button onClick={() => console.log('Button was clicked!')}>
-  Click Me
-			</Button> */}
-			{/* <button onClick={() => scrollIntoView(aboutSectionRef)}>asd</button> */}
 			<Section title="About" ref={aboutSectionRef}>
 				<p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.

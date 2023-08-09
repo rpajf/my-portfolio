@@ -16,14 +16,11 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 
 	const handleButtonClick = React.useCallback((buttonName: string) => {
 		if(buttonName=== 'About'){
-			console.log('test');
 			scrollToElement.scrollIntoAbout();
 			setActiveButton(buttonName);
-
 		}
+		
 		if(buttonName=== 'Projects'){
-			console.log('test2');
-
 			scrollToElement.scrollIntoProjects();
 			setActiveButton(buttonName);
 
