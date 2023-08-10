@@ -12,7 +12,6 @@ import { scrollIntoView } from '../../utils/scroll';
 import { nodeRouterDescription, nodeRouterImgAlt } from '../../consts/projectsInfo';
 import Section from '../../shared/Section';
 import ProjectWrapper from '../../components/Projects';
-// https://fascinating-monstera-ab9528.netlify.app/
 
 const Home: React.FC = () => {
 	const techlinks = [
@@ -20,7 +19,12 @@ const Home: React.FC = () => {
 		iconnode,
 		iconprisma
 	];
-	
+
+	const [selectedCategory, setSelectedCategory] = React.useState<'Frontend' | 'Backend'>('Backend');
+	const setFrontend = React.useCallback(() => setSelectedCategory('Frontend'),[]);
+	const setBackend = React.useCallback(() => setSelectedCategory('Backend'),[]);
+
+
 	const projectsSectionRef = React.useRef<HTMLDivElement>(null);
 	const aboutSectionRef = React.useRef<HTMLDivElement>(null);
 
@@ -51,12 +55,16 @@ const Home: React.FC = () => {
 			</Section>
 			<Section title="Projects" ref={projectsSectionRef}>
 				<div className='category'>
-					<Button  hasBorderBottom onClick={() => {}}>Frontend</Button>
-					<Button  hasBorderBottom onClick={() => {}}>Backend</Button>
-
+					<Button hasBorderBottom onClick={setBackend} isActiveByDefault={selectedCategory==='Backend'}>Backend</Button>
+					<Button hasBorderBottom onClick={setFrontend} isActiveByDefault={selectedCategory==='Frontend'}>Frontend</Button>
 				</div>
-				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
-				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"/>
+				{selectedCategory==='Backend' && (
+					<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
+				)}
+				{selectedCategory==='Frontend' && (
+					<ProjectWrapper title='Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>
+				)}
+				{/* <ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"/> */}
 			</Section>
 			<Section title="Technologies" ref={aboutSectionRef}>
 				<p>

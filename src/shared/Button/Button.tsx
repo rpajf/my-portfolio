@@ -10,6 +10,7 @@ interface ButtonProps {
   hasBorder?: boolean;
   hasBorderBottom?: boolean;
 	hasBackground?: boolean
+	isActiveByDefault?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,7 +18,8 @@ const Button: React.FC<ButtonProps> = ({
 	children,
 	hasBorder = false,
 	hasBorderBottom = false,
-	hasBackground = false
+	hasBackground = false,
+	isActiveByDefault = false
 }) => {
 	const [isActive, setIsActive] = React.useState<boolean>(false);
 	const handleOutsideClick = React.useCallback(() => {
@@ -38,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
 		<button
 			className={classNames('button', {
 				'has-border': hasBorder,
-				'is-active': isActive,
+				'is-active': isActive || isActiveByDefault,
 				'has-border-bottom': hasBorderBottom,
 				'has-background': hasBackground
 			})}
