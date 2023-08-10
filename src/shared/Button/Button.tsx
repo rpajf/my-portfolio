@@ -4,7 +4,7 @@ import { useOutsideClick } from '../../hooks/clickOutside';
 import './Button.styles.scss';
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   isLoading?: boolean;
   children: React.ReactNode | string;
   hasBorder?: boolean;

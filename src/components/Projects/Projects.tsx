@@ -2,24 +2,24 @@ import React from 'react';
 import './Projects.style.scss';
 import Button from '../../shared/Button/Button';
 interface ProjectWrapperProps{
-
   title: string
   description: string
   link: string
   imageUrl?: string
+	alt?: string
   tecnologies: string[]
 }
 
-const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link, tecnologies, imageUrl}) => {
+const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link, tecnologies, imageUrl, alt}) => {
 	const navigateToUrl = React.useCallback(() => location.href= link, []);
 	return (
 		<div className='container'>
+		
 			<div className='about'>
 				<h2 className='project-title'>{title}</h2>
 				<div className='project-section'>
 					<p className='description'>{description}</p>
-
-					<img src="" alt="" className='project-img'/>
+					<img src={imageUrl} alt={alt} className='project-img'/>
 				</div>
 			</div>
 			<div className='footer'>
@@ -29,7 +29,6 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link
 					))}
 				</div>
 				<Button hasBackground onClick={navigateToUrl}>View on github</Button>
-
 			</div>
 	
 		</div>

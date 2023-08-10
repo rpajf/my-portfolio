@@ -4,3 +4,6 @@
 
 export const nodeRouterDescription =
 	'\nLibrary created for studying purposes that provides a router for an HTTP server using only typescript and native node modules';
+
+export const nodeRouterImgAlt =
+	'Gif with the demo on how to use the node-http-router';
