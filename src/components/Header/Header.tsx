@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../shared/Button/Button';
 import classNames from 'classnames';
+import {scrollIntoView} from '../../utils/scroll';
 import './Header.styles.scss';
 
 interface HeaderProps {
@@ -23,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 		if(buttonName=== 'Projects'){
 			scrollToElement.scrollIntoProjects();
 			setActiveButton(buttonName);
-
 		}
 	},[scrollToElement]);
 
@@ -42,6 +42,12 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 		}
 	}, [window.scrollY]);
 
+	// const scrollToSection = React.useMemo(() => {
+	// 	return {
+	// 		scrollIntoProjects: scrollIntoView(projectsSectionRef, 50), // Example offset value
+	// 		scrollIntoAbout: scrollIntoView(aboutSectionRef, 0)
+	// 	};
+	// }, [projectsSectionRef, aboutSectionRef]);
 	return (
 		<div className={classNames('header-container', { 'is-scrolling': isScrolled })}>
 			<Button

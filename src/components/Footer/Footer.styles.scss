@@ -1,0 +1,15 @@
+@import '../../mixins/flex.scss';
+
+.section-footer{
+
+}
+.content {
+  @include flex(column, center, center);
+  background-color: var(--gray-dark-purple-color);
+  height: 80px;
+}
+
+.footer-header {
+  line-height: 24px;
+  font-size: 17px;
+}

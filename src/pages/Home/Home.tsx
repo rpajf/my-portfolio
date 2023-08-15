@@ -6,8 +6,7 @@ import iconreact from '../../assets/techs/icons8-react.svg';
 import iconnode from '../../assets/techs/icons8-nodejs.svg';
 import iconprisma from '../../assets/techs/icons8-react.svg';
 import nodelibgif from '../../assets/gifs/node-router-demo.gif';
-import Button from '../../shared/Button/Button';
-
+import Footer from '../../components/Footer/Footer';
 import { scrollIntoView } from '../../utils/scroll';
 import { nodeRouterDescription, nodeRouterImgAlt } from '../../consts/projectsInfo';
 import Section from '../../shared/Section';
@@ -20,11 +19,6 @@ const Home: React.FC = () => {
 		iconprisma
 	];
 
-	const [selectedCategory, setSelectedCategory] = React.useState<'Frontend' | 'Backend'>('Backend');
-	const setFrontend = React.useCallback(() => setSelectedCategory('Frontend'),[]);
-	const setBackend = React.useCallback(() => setSelectedCategory('Backend'),[]);
-
-
 	const projectsSectionRef = React.useRef<HTMLDivElement>(null);
 	const aboutSectionRef = React.useRef<HTMLDivElement>(null);
 
@@ -36,6 +30,7 @@ const Home: React.FC = () => {
 			scrollIntoAbout: scrollIntoView(aboutSectionRef)
 		};
 	}, [projectsSectionRef, aboutSectionRef]);
+
 	return (
 		<main className="home">
 			<Header scrollToElement={scrollToSection}/>
@@ -43,34 +38,28 @@ const Home: React.FC = () => {
 			<section className="home-section">
 				<MainContent
 					headline="Hello, my name is Raphael"
-					title="welcome to my portfolio"
+					title=""
 					subTitle="Software engineer | fullstack developer"
 				/>
 				<div className="photo" />
 			</section>
-			<Section title="About" ref={aboutSectionRef}>
+			<Section title="About me" ref={aboutSectionRef}>
 				<p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
 				</p>
 			</Section>
 			<Section title="Projects" ref={projectsSectionRef}>
-				<div className='category'>
-					<Button hasBorderBottom onClick={setBackend} isActiveByDefault={selectedCategory==='Backend'}>Backend</Button>
-					<Button hasBorderBottom onClick={setFrontend} isActiveByDefault={selectedCategory==='Frontend'}>Frontend</Button>
-				</div>
-				{selectedCategory==='Backend' && (
-					<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
-				)}
-				{selectedCategory==='Frontend' && (
-					<ProjectWrapper title='Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>
-				)}
-				{/* <ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} link="https://github.com/rpajf/http-node-routing"/> */}
+
+				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
+				<ProjectWrapper title='TMDB Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>
+
 			</Section>
 			<Section title="Technologies" ref={aboutSectionRef}>
 				<p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
 				</p>
 			</Section>
+			<Footer/>
 		</main>
 	);
 };

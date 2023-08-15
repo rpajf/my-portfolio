@@ -4,14 +4,14 @@ import Button from '../../shared/Button/Button';
 interface ProjectWrapperProps{
   title: string
   description: string
-  link: string
+  githubLink: string
   imageUrl?: string
 	alt?: string
   tecnologies: string[]
 }
 
-const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, link, tecnologies, imageUrl, alt}) => {
-	const navigateToUrl = React.useCallback(() => location.href= link, []);
+const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, githubLink, tecnologies, imageUrl, alt}) => {
+	const navigateToUrl = React.useCallback(() => location.href= githubLink, []);
 	return (
 		<div className='container'>
 		
