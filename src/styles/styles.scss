@@ -37,11 +37,11 @@ body::before {
 	bottom: 0;
 	// background-image: linear-gradient(rgba(87, 67, 167, 0.6), rgba(87, 67, 167, 0.5)), url('../assets/sky.svg');
 	// background-image: linear-gradient(rgba(122, 119, 133, 0.1), rgba(47, 46, 52, 0.5)), url('../assets/bg.svg');
-	background-image: url('../assets/bg.svg');
-
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+	// background-image: url('../assets/bg.svg');
+	background-color: $deep-blue;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center center;
 	z-index: -1;
 }
 

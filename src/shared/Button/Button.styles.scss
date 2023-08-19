@@ -1,12 +1,14 @@
 @import '../../mixins/font.scss';
 
+$namespace: "button";
+
 .text {
 	@include text;
 }
 
-.button {
-	width: 140px;
-	height: 40px;
+.#{$namespace} {
+	// width: 140px;
+	// height: 40px;
 	border-radius: 4px;
 	margin-right: 6px;
 	color: #fff;
@@ -17,7 +19,9 @@
 		display: block;
 	}
 	&.has-background {
+		// background-color: var(--pink-color);
 		background-color: var(--pink-color);
+
 	}
 	&::before {
 		position: absolute;
@@ -27,6 +31,28 @@
 		border-bottom: 2px solid var(--pink-color);
 		width: 140px;
 		display: none;
+	}
+	&.#{$namespace}-small {
+		width: 80px;
+		height: 20px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		// min-width: var(--button-small-min-width);
+	}
+
+	&.#{$namespace}-medium {
+		// padding: var(--button-medium-padding);
+		width: 120px;
+		height: 40px;
+	}
+
+	&.#{$namespace}-large {
+		padding:  var(--button-large-padding);
+		min-width: var(--button-large-min-width);
+	}
+	&.has-background:hover{
+		background-color: red;
 	}
 
 	&.has-border-bottom:hover {

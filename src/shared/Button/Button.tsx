@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { useOutsideClick } from '../../hooks/clickOutside';
 import './Button.styles.scss';
 
+type ButtonSize = 'small' | 'medium' | 'large';
 interface ButtonProps {
   onClick?: () => void;
   isLoading?: boolean;
@@ -11,7 +12,9 @@ interface ButtonProps {
   hasBorderBottom?: boolean;
 	hasBackground?: boolean
 	isActiveByDefault?: boolean
+	size?: ButtonSize 
 }
+const STYLE_NAMESPACE = 'button';
 
 const Button: React.FC<ButtonProps> = ({
 	onClick,
@@ -19,7 +22,8 @@ const Button: React.FC<ButtonProps> = ({
 	hasBorder = false,
 	hasBorderBottom = false,
 	hasBackground = false,
-	isActiveByDefault = false
+	isActiveByDefault = false,
+	size='medium'
 }) => {
 	const [isActive, setIsActive] = React.useState<boolean>(false);
 	const handleOutsideClick = React.useCallback(() => {
@@ -38,12 +42,18 @@ const Button: React.FC<ButtonProps> = ({
 
 	return (
 		<button
-			className={classNames('button', {
-				'has-border': hasBorder,
-				'is-active': isActive || isActiveByDefault,
-				'has-border-bottom': hasBorderBottom,
-				'has-background': hasBackground
-			})}
+			className={classNames('button', 
+			
+				STYLE_NAMESPACE,
+				`${STYLE_NAMESPACE}-${size}`,
+				{
+					'has-border': hasBorder,
+					'is-active': isActive && isActiveByDefault,
+					'has-border-bottom': hasBorderBottom,
+					'has-background': hasBackground,
+				}
+			)}
+	
 			ref={buttonRef}
 			onClick={handleClick}
 		>

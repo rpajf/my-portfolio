@@ -28,13 +28,19 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 	},[scrollToElement]);
 
 	React.useEffect(() => {
+		
 		window.addEventListener('scroll', handleScroll);
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
+	// const showComponent = React.useMemo(() => {
+	// 	return window.scrollY;
+	// },[window.scrollY]);
+	// console.log(showComponent);
 	const handleScroll = React.useCallback(() => {
+		console.log(window.scrollY);
 		if (window.scrollY > 50) {
 			setIsScrolled(true);
 		} else {
@@ -54,6 +60,7 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 				onClick={() => handleButtonClick('About')}
 				hasBorderBottom
 				hasBorder={activeButton === 'About'}
+				isActiveByDefault
 			>
         About
 			</Button>
@@ -61,6 +68,7 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 				onClick={() => handleButtonClick('Projects')}
 				hasBorderBottom
 				hasBorder={activeButton === 'Projects'}
+				isActiveByDefault
 			>
         Projects
 			</Button>
@@ -68,9 +76,11 @@ const Header: React.FC<HeaderProps> = ({scrollToElement}) => {
 				onClick={() => {}}
 				hasBorderBottom
 				hasBorder={activeButton === 'Skills'}
+				isActiveByDefault
 			>
         Skills
 			</Button>
+			<Button size='small' >go Back</Button>
 		</div>
 	);
 };

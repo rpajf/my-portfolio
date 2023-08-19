@@ -6,7 +6,9 @@
 	--yellow-default-color: #{inspect($default-yellow)};
 	--sticker-purple-color: #{inspect($sticker-purple)};
 	--sticker-dark-purple-color: #{inspect($sticker-dark-purple)};
+	--lavender-blue-color: #{inspect($lavender-blue)};
 	--pink-color: #{inspect($pink)};
+	--pink-dark-color:#{inspect($pink-dark)};
 	--purple-dark-color: #{inspect($purple-dark)};
 	--pool-gray-color: #{inspect($pool-gray)};
 	--text-secondary-color: #{inspect($green-cyan)};
@@ -16,6 +18,18 @@
 	--white-warm-color: #{inspect($white-warm)};
 	--gray-light-blue-color: #{inspect($gray-light-blue)};
 	--gray-dark-purple-color: #{inspect($gray-dark-purple)};
+
+	
+	--button-small-border-radius: 150px;
+	--button-small-height: 30px;
+	--button-medium-height: 60px;
+	--button-large-height: 90px;
+
+	--button-medium-border-radius: 150px;
+	--button-large-border-radius: 150px;
+	--button-small-padding: 0 15px;
+	--button-medium-padding: 0 20px;
+	--button-large-padding: 0 25px;
 
 }
 // $denim-blue: #273caa;

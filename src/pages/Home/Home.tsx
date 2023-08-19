@@ -59,7 +59,8 @@ const Home: React.FC = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
 				</p>
 			</Section>
-			<Footer/>
+			{/* <Footer/> */}
+
 		</main>
 	);
 };
