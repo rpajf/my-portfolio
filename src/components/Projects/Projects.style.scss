@@ -1,6 +1,6 @@
 @import '../../mixins/flex.scss';
 
-.container {
+.project-container {
   border-radius: 4px;
   margin: 20px 0 20px 0;
   padding: 12px;
@@ -12,9 +12,10 @@
   }
 }
 
-.about {
-  max-width: 600px;
-  @include flex(column, start);
+.project-info {
+  // max-width: 600px;
+  width: 100%;
+  // @include flex(column, start);
 }
 
 .project-title {
@@ -23,7 +24,7 @@
 }
 
 .project-section {
-  @include flex;
+  @include flex(row, center, space-between);
   height: 100%;
 }
 
@@ -45,7 +46,7 @@
   border-radius: 4px;
 }
 
-.footer {
+.project-footer {
   @include flex(column,start,start);
 }
 

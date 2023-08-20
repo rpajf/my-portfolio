@@ -13,16 +13,16 @@ interface ProjectWrapperProps{
 const ProjectWrapper: React.FC<ProjectWrapperProps> = ({title, description, githubLink, tecnologies, imageUrl, alt}) => {
 	const navigateToUrl = React.useCallback(() => location.href= githubLink, []);
 	return (
-		<div className='container'>
+		<div className='project-container'>
 		
-			<div className='about'>
+			<div className='project-info'>
 				<h2 className='project-title'>{title}</h2>
 				<div className='project-section'>
 					<p className='description'>{description}</p>
 					<img src={imageUrl} alt={alt} className='project-img'/>
 				</div>
 			</div>
-			<div className='footer'>
+			<div className='project-footer'>
 				<div className='tecnologies-wrapper'>
 					{tecnologies.map((imageUrl) => (
 						<img className='icon' key={1} src={`${imageUrl}`}/>

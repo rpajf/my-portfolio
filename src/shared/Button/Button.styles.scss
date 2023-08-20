@@ -7,8 +7,6 @@ $namespace: "button";
 }
 
 .#{$namespace} {
-	// width: 140px;
-	// height: 40px;
 	border-radius: 4px;
 	margin-right: 6px;
 	color: #fff;
@@ -20,7 +18,8 @@ $namespace: "button";
 	}
 	&.has-background {
 		// background-color: var(--pink-color);
-		background-color: var(--pink-color);
+		background-color: var(--pink-dark-color);
+
 
 	}
 	&::before {
@@ -42,8 +41,7 @@ $namespace: "button";
 	}
 
 	&.#{$namespace}-medium {
-		// padding: var(--button-medium-padding);
-		width: 120px;
+		width: 130px;
 		height: 40px;
 	}
 
@@ -52,7 +50,7 @@ $namespace: "button";
 		min-width: var(--button-large-min-width);
 	}
 	&.has-background:hover{
-		background-color: red;
+		background-color: var(--pink-color);
 	}
 
 	&.has-border-bottom:hover {
