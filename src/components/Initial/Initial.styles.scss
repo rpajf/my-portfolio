@@ -5,11 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // margin: 0 auto;
   position: relative;
-  // overflow: hidden; // To contain the pseudo-elements
-  border-bottom: 3px solid var(--pool-gray-color);
-  // z-index: -1;
+  border-bottom: 2px solid var(--pool-gray-color);
 
   &::before,
   &::after {
@@ -18,7 +15,7 @@
     top: 0;
     bottom: 0;
     width: 50%;
-    height: 100%; // Cover the full height
+    height: 100%;
   }
 
   &::before {
@@ -27,7 +24,7 @@
   }
 
   &::after {
-    left: 50%; // Position it at the right half
+    left: 50%;
     background-color: #0f0f11;
     z-index: -1;
   }

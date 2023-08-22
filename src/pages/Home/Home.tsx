@@ -45,7 +45,7 @@ const Home: React.FC = () => {
 				<IconsWrapper size='medium' color='dark'/>
 				<section className="home-section">
 			
-					<div className="photo" />
+					{/* <div className="photo" /> */}
 				</section>
 				<Section title="About me" ref={aboutSectionRef}>
 					<p>
