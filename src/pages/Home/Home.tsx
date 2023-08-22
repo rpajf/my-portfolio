@@ -6,7 +6,7 @@ import iconreact from '../../assets/techs/icons8-react.svg';
 import iconnode from '../../assets/techs/icons8-nodejs.svg';
 import iconprisma from '../../assets/techs/icons8-react.svg';
 import nodelibgif from '../../assets/gifs/node-router-demo.gif';
-import Footer from '../../components/Footer/Footer';
+import IconsWrapper from '../../components/Icons';
 import { scrollIntoView } from '../../utils/scroll';
 import { nodeRouterDescription, nodeRouterImgAlt } from '../../consts/projectsInfo';
 import Section from '../../shared/Section';
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
 	return (
 		<main className="home">
 			<Header scrollToElement={scrollToSection}/>
-	
+			<IconsWrapper size='medium' color='dark'/>
 			<section className="home-section">
 				<MainContent
 					headline="Hello, my name is Raphael"

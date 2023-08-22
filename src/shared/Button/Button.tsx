@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useOutsideClick } from '../../hooks/clickOutside';
+import { ComponentSize } from '../../types/types';
 import './Button.styles.scss';
 
-type ButtonSize = 'small' | 'medium' | 'large';
+
 interface ButtonProps {
   onClick?: () => void;
   isLoading?: boolean;
@@ -12,7 +13,7 @@ interface ButtonProps {
   hasBorderBottom?: boolean;
 	hasBackground?: boolean
 	isActiveByDefault?: boolean
-	size?: ButtonSize 
+	size?: ComponentSize 
 }
 const STYLE_NAMESPACE = 'button';
 
