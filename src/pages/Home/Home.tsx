@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.styles.scss';
 import MainContent from '../../shared/MainContent/MainContent';
 import Header from '../../components/Header';
+import BurgerMenu from '../../components/Menu/BurguerMenu';
 import Initial from '../../components/Initial';
 import iconreact from '../../assets/techs/icons8-react.svg';
 import iconnode from '../../assets/techs/icons8-nodejs.svg';
@@ -41,6 +42,7 @@ const Home: React.FC = () => {
 				/>
 			</Initial>
 			<section className="home">
+
 				{/* <Header scrollToElement={scrollToSection}/> */}
 				<IconsWrapper size='medium' color='dark'/>
 				<section className="home-section">
@@ -53,6 +55,9 @@ const Home: React.FC = () => {
 					</p>
 				</Section>
 				<Section title="Projects" ref={projectsSectionRef}>
+					<BurgerMenu>
+						<button>asdasdasdas</button>
+					</BurgerMenu>
 
 					<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
 					<ProjectWrapper title='TMDB Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>

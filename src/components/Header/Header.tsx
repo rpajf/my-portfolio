@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../shared/Button/Button';
 import classNames from 'classnames';
+import {CiMenuBurger} from 'react-icons/ci';
 import {scrollIntoView} from '../../utils/scroll';
 import './Header.styles.scss';
 
