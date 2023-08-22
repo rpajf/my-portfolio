@@ -26,6 +26,21 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	box-sizing: border-box;
 	position: relative;
+	&::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 body::before {
@@ -38,7 +53,9 @@ body::before {
 	// background-image: linear-gradient(rgba(87, 67, 167, 0.6), rgba(87, 67, 167, 0.5)), url('../assets/sky.svg');
 	// background-image: linear-gradient(rgba(122, 119, 133, 0.1), rgba(47, 46, 52, 0.5)), url('../assets/bg.svg');
 	// background-image: url('../assets/bg.svg');
-	background-color: $deep-blue;
+	// background-color: var(--dark-panel-background-color);
+	background-color: #2a2c33;
+
 	// background-size: cover;
 	// background-repeat: no-repeat;
 	// background-position: center center;

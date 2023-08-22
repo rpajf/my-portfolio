@@ -8,6 +8,12 @@
   width: 1280px;
   margin: 0 auto;
 }
+.initial{
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+
+}
 
 .home-section {
   @include flex(row, center, space-between);

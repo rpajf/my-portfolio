@@ -19,13 +19,16 @@
 	--white-warm-color: #{inspect($white-warm)};
 	--gray-light-blue-color: #{inspect($gray-light-blue)};
 	--gray-dark-purple-color: #{inspect($gray-dark-purple)};
+	--dark-panel-background-color: #{inspect($dark-panel-background)};
+	--soft-gray-color: #{inspect($soft-gray)};
+	--dark-green-color: #{inspect($dark-green)};
+	--light-gray-green-color: #{inspect($dark-panel-background)};
+	--off-white-color: #{inspect($off-white)};
 
-	
 	--button-small-border-radius: 150px;
 	--button-small-height: 30px;
 	--button-medium-height: 60px;
 	--button-large-height: 90px;
-
 	--button-medium-border-radius: 150px;
 	--button-large-border-radius: 150px;
 	--button-small-padding: 0 15px;
@@ -33,26 +36,3 @@
 	--button-large-padding: 0 25px;
 
 }
-// $denim-blue: #273caa;
-// $deep-blue: #2f3660;
-// $faux-indigo: #242d5d;
-// $dark-panel-background: #2a2c33;
-// $lavender: #dce1fe;
-// $light-lavender: #e9edfe;
-// $dark-lavender: #eaeaeb;
-// $lavender-blush: #fef9fa;
-// $lavender-blue: #c2ccfe;
-// $lavender-indigo: #854cef;
-// $blue-medium: #283cae;
-// $hover-blue: #2e46c8;
-// $arena-light-gray: #f0f1f4;
-// $label_bg_color: #e7e7ec;
-// $blue-dark: #0a1749;
-// $gray-light-blue: #dce1fe;
-// $gray-light-blueish: #b9bece;
-// $gray-light-blueish-2: #c3c5cf;
-// $gray-lighten2: #e1e2eb;
-// $gray-lighten3: #ebecf2;
-// $gray-dark: #707070;
-// $gray-dark-blue: #5a699d;
-// $default-yellow: #ffd356;

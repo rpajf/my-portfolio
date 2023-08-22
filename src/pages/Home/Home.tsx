@@ -34,6 +34,9 @@ const Home: React.FC = () => {
 	return (
 		<main className="home">
 			<Header scrollToElement={scrollToSection}/>
+			<section className='initial'>
+				
+			</section>
 			<IconsWrapper size='medium' color='dark'/>
 			<section className="home-section">
 				<MainContent
