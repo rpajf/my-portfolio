@@ -1,1 +1,1 @@
-export type { ComponentSize, IconName } from './types';
+export type { ComponentSize, IconName, TagTypes } from './types';

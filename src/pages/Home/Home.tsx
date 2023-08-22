@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.styles.scss';
 import MainContent from '../../shared/MainContent/MainContent';
 import Header from '../../components/Header';
+import Initial from '../../components/Initial';
 import iconreact from '../../assets/techs/icons8-react.svg';
 import iconnode from '../../assets/techs/icons8-nodejs.svg';
 import iconprisma from '../../assets/techs/icons8-react.svg';
@@ -32,38 +33,39 @@ const Home: React.FC = () => {
 	}, [projectsSectionRef, aboutSectionRef]);
 
 	return (
-		<main className="home">
-			<Header scrollToElement={scrollToSection}/>
-			<section className='initial'>
-				
-			</section>
-			<IconsWrapper size='medium' color='dark'/>
-			<section className="home-section">
+		<main>
+			<Initial>
 				<MainContent
-					headline="Hello, my name is Raphael"
-					title=""
+					title="Raphael Portela"
 					subTitle="Software engineer | fullstack developer"
 				/>
-				<div className="photo" />
+			</Initial>
+			<section className="home">
+				{/* <Header scrollToElement={scrollToSection}/> */}
+				<IconsWrapper size='medium' color='dark'/>
+				<section className="home-section">
+			
+					<div className="photo" />
+				</section>
+				<Section title="About me" ref={aboutSectionRef}>
+					<p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
+					</p>
+				</Section>
+				<Section title="Projects" ref={projectsSectionRef}>
+
+					<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
+					<ProjectWrapper title='TMDB Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>
+
+				</Section>
+				<Section title="Technologies" ref={aboutSectionRef}>
+					<p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
+					</p>
+				</Section>
+				{/* <Footer/> */}
+
 			</section>
-			<Section title="About me" ref={aboutSectionRef}>
-				<p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
-				</p>
-			</Section>
-			<Section title="Projects" ref={projectsSectionRef}>
-
-				<ProjectWrapper title='Node http router' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing" imageUrl={nodelibgif} alt={nodeRouterImgAlt}/>
-				<ProjectWrapper title='TMDB Movies' description={`${nodeRouterDescription}`} tecnologies={techlinks} githubLink="https://github.com/rpajf/http-node-routing"  alt={nodeRouterImgAlt}/>
-
-			</Section>
-			<Section title="Technologies" ref={aboutSectionRef}>
-				<p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, rem.
-				</p>
-			</Section>
-			{/* <Footer/> */}
-
 		</main>
 	);
 };

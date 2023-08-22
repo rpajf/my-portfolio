@@ -1,9 +1,37 @@
 @import '../../mixins/flex.scss';
 
 .content {
-	max-width: 400px;
-	// @include flex(column, start)
+	width: 400px;
+	text-align: center;
+	@include flex(column, start);
+	z-index: 10;
 
+}
+.title-main {
+	font-family: 'Noto Serif';
+	font-size: 60px;
+	font-weight: 500;
+	// color: var(--lavender-white-color);
+	// color: var(--pool-gray-color);
+	color: var(--lavender-blue-color);
+	letter-spacing: 5.2px;
+}
+.headline-main {
+	font-family: 'Roboto';
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--lavender-white-color);
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+}
+.subtitle-main {
+	// font-family: 'Noto Serif';
+	font-family: 'Roboto';
+	font-size: 26px;
+	// color: var(--soft-gray-color);
+	color: var(--pool-gray-color);
+	font-weight: 500;
+	letter-spacing: 2px;
 }
 
 .title {

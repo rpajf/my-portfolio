@@ -7,3 +7,5 @@ export type IconName =
 	| 'sass'
 	| 'prisma'
 	| 'typescript';
+
+export type TagTypes = 'paragraph' | 'heading1' | 'heading2'
